@@ -5,10 +5,9 @@ table 50000 ar_Event
 
     fields
     {
-        field(1; "Event No."; Integer)
+        field(1; "No."; Integer)
         {
             DataClassification = CustomerContent;
-
         }
         field(2; "No. Series"; Code[20])
         {
@@ -31,7 +30,7 @@ table 50000 ar_Event
 
     keys
     {
-        key(Key1; "Event No.")
+        key(Key1; "No.")
         {
             Clustered = true;
         }
@@ -39,10 +38,10 @@ table 50000 ar_Event
 
     fieldgroups
     {
-        fieldgroup(DropDown; "Event No.", Description)
+        fieldgroup(DropDown; "No.", Description)
         {
         }
-        fieldgroup(Brick; "Event No.", Description)
+        fieldgroup(Brick; "No.", Description)
         {
         }
     }
