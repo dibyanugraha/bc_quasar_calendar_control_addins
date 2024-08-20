@@ -2,6 +2,8 @@ table 50000 ar_Event
 {
     Caption = 'Events';
     DataClassification = CustomerContent;
+    LookupPageId = ar_Events;
+    DrillDownPageId = ar_Events;
 
     fields
     {
