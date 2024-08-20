@@ -19,6 +19,14 @@ table 50000 ar_Event
         {
             DataClassification = CustomerContent;
         }
+        field(20; "Start Date"; DateTime)
+        {
+            DataClassification = CustomerContent;
+        }
+        field(21; "End Date"; DateTime)
+        {
+            DataClassification = CustomerContent;
+        }
     }
 
     keys
