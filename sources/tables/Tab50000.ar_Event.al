@@ -5,7 +5,7 @@ table 50000 ar_Event
 
     fields
     {
-        field(1; "No."; Integer)
+        field(1; "No."; Code[20])
         {
             DataClassification = CustomerContent;
         }
