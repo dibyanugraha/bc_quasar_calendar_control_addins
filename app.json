@@ -1,0 +1,33 @@
+{
+  "id": "aa1e7032-e1d4-4fcc-8ecf-3535c4a037b4",
+  "name": "Microsoft Dynamics 365 Business Central Calendar Control Addins Sample",
+  "publisher": "A. Dibyanugraha",
+  "version": "1.0.0.0",
+  "brief": "Microsoft Dynamics 365 Business Central Calendar Control Addins Sample",
+  "description": "Microsoft Dynamics 365 Business Central Calendar Control Addins Sample",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "https://github.com/dibyanugraha/bc_quasar_calendar_control_addins",
+  "url": "https://github.com/dibyanugraha/bc_quasar_calendar_control_addins",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "24.0.0.0",
+  "application": "24.0.0.0",
+  "idRanges": [
+    {
+      "from": 50000,
+      "to": 99999
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": false,
+    "allowDownloadingSource": false,
+    "includeSourceInSymbolFile": false,
+    "applyToDevExtension": false
+  },
+  "runtime": "13.0",
+  "features": [
+    "NoImplicitWith"
+  ],
+  "keyVaultUrls":[]
+}
