@@ -28,10 +28,18 @@ table 50000 ar_Event
         field(20; "Start Date"; DateTime)
         {
             DataClassification = CustomerContent;
+            trigger OnLookup()
+            begin
+                Validate("Start Date", LookupDateTime("Start Date"));
+            end;
         }
         field(21; "End Date"; DateTime)
         {
             DataClassification = CustomerContent;
+            trigger OnLookup()
+            begin
+                Validate("End Date", LookupDateTime("End Date"));
+            end;
         }
     }
 
@@ -90,5 +98,20 @@ table 50000 ar_Event
         MarketingSetup.Get();
         NoSeries.TestManual(MarketingSetup.ar_EventNos);
         "No. Series" := '';
+    end;
+
+    procedure LookupDateTime(InitialValue: DateTime): DateTime
+    var
+        DateTimeDialog: Page "Date-Time Dialog";
+        NewValue: DateTime;
+    begin
+        DateTimeDialog.SetDateTime(InitialValue);
+
+        if DateTimeDialog.RunModal() = Action::OK then begin
+            NewValue := DateTimeDialog.GetDateTime();
+            exit(NewValue);
+        end
+        else
+            exit(InitialValue);
     end;
 }
