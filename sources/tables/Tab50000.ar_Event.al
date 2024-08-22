@@ -36,17 +36,37 @@ table 50000 ar_Event
         field(20; "Start Date"; DateTime)
         {
             DataClassification = CustomerContent;
+
             trigger OnLookup()
             begin
                 Validate("Start Date", LookupDateTime("Start Date"));
+            end;
+
+            trigger OnValidate()
+            begin
+                if "End Date" = 0DT then
+                    exit;
+
+                if "Start Date" > "End Date" then
+                    FieldError("Start Date", ErrStartDateMustBeEarlierThanEndDate);
             end;
         }
         field(21; "End Date"; DateTime)
         {
             DataClassification = CustomerContent;
+
             trigger OnLookup()
             begin
                 Validate("End Date", LookupDateTime("End Date"));
+            end;
+
+            trigger OnValidate()
+            begin
+                if "Start Date" = 0DT then
+                    exit;
+
+                if "Start Date" > "End Date" then
+                    FieldError("End Date", ErrEndDateMustBeLaterThanStartDate);
             end;
         }
     }
@@ -71,6 +91,8 @@ table 50000 ar_Event
     var
         MarketingSetup: Record "Marketing Setup";
         NoSeries: Codeunit "No. Series";
+        ErrStartDateMustBeEarlierThanEndDate: Label 'must be earlier than end date.';
+        ErrEndDateMustBeLaterThanStartDate: Label 'must be later than start date.';
 
     trigger OnInsert()
     var
