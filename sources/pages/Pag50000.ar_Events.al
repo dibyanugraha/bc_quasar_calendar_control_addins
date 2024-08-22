@@ -5,6 +5,7 @@ page 50000 ar_EventsList
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = ar_Event;
+    Editable = true;
 
     layout
     {
@@ -16,7 +17,15 @@ page 50000 ar_EventsList
                 {
                     ApplicationArea = All;
                 }
+                field(Title; Rec.Title)
+                {
+                    ApplicationArea = All;
+                }
                 field(Description; Rec.Description)
+                {
+                    ApplicationArea = All;
+                }
+                field(Color; Rec.Color)
                 {
                     ApplicationArea = All;
                 }

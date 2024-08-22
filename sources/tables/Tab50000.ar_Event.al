@@ -21,7 +21,15 @@ table 50000 ar_Event
             DataClassification = CustomerContent;
             TableRelation = "No. Series";
         }
-        field(10; "Description"; Text[100])
+        field(10; Title; Text[50])
+        {
+            DataClassification = CustomerContent;
+        }
+        field(11; Color; Enum ar_Colors)
+        {
+            DataClassification = CustomerContent;
+        }
+        field(12; Description; Text[100])
         {
             DataClassification = CustomerContent;
         }
