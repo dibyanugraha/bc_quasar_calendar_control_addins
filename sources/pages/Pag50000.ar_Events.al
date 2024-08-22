@@ -1,6 +1,6 @@
-page 50000 ar_Events
+page 50000 ar_EventsList
 {
-    Caption = 'Events';
+    Caption = 'Events List';
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
